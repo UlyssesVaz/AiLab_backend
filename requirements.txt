@@ -1,0 +1,23 @@
+fastapi==0.121.0
+uvicorn==0.38.0
+python-multipart==0.0.20
+openai==2.7.1
+langchain==1.0.4
+langgraph==1.0.2
+python-dotenv==1.2.1
+pypdf2==3.0.1
+python-docx==1.2.0
+pydantic==2.12.4
+
+
+# fastapi
+# uvicorn
+# python-multipart
+# openai
+# langchain 
+langchain-openai
+# langgraph 
+# python-dotenv 
+# pypdf2 
+# python-docx 
+# pydantic
