@@ -32,8 +32,9 @@ class ProjectState(BaseModel):
     
     # Internal workflow tracking
     current_agent: Optional[AgentRole] = None
+    metadata: Dict[str, Any] = {}
 
-class EventType(Enum):
+class EventType(str, Enum):
     STEP_START = "step_start"
     STEP_COMPLETE = "step_complete" 
     AGENT_THINKING = "agent_thinking"
@@ -45,6 +46,7 @@ class ProgressEvent(BaseModel):
     event_type: EventType
     timestamp: datetime
     step_name: str
-    agent: Optional[AgentRole] = None
+    agent_role: Optional[AgentRole] = None  # ← Changed from "agent" to "agent_role"
+    message: Optional[str] = None  # ← Add this field (used in virtual_lab)
+    progress: Optional[float] = None
     details: Optional[Dict[str, Any]] = None
-    progress: Optional[float] = None  # 0.0 to 1.0
